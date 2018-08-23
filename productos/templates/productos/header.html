@@ -2,17 +2,18 @@
   <nav class="main-nav">
     <ul>
       <li>
-        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="{% url 'productos:index' %}" class="nav-link {% if current == 'index' %}current{% endif %}">Inicio</a>
       </li>
       <li>
-        <a href="empresa.html" class="nav-link">Quienes somos</a>
+        <a href="{% url 'productos:empresa' %}" class="nav-link {% if current == 'empresa' %}current{% endif %}">Quienes somos</a>
       </li>
       <li>
-        <a href="#" class="nav-link current">Productos</a>
+        <a href="{% url 'productos:productos' %}" class="nav-link {% if current == 'productos' %}current{% endif %}">Productos</a>
       </li>
       <li>
-        <a href="contacto.html" class="nav-link">Contacto</a>
+        <a href="{% url 'productos:contacto' %}" class="nav-link {% if current == 'contacto' %}current{% endif %}">Contacto</a>
       </li>
     </ul>
   </nav>
 </header>
+

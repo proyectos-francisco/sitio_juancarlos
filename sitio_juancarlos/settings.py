@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'productos.apps.ProductosConfig',
+    'sass_processor',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -104,7 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = 'es-cl'
+LANGUAGE_CODE = 'es-CL'
 
 TIME_ZONE = 'UTC'
 
@@ -119,3 +120,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+#TODO: Cambiar en produccion
+STATIC_ROOT = 'var/www/static/'
+
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'sass_processor.finders.CssFinder',
+    # 'django.contrib.staticfiles.finders.DefaultStorageFinder',
+]
+
+#TODO: Cambiar a True en produccion
+SASS_PROCESSOR_ENABLED = False
+
+MEDIA_ROOT = '/media/'
+MEDIA_URL = '/media/'

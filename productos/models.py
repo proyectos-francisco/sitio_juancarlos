@@ -8,6 +8,14 @@ class Producto(models.Model):
   descripcion = models.CharField("Descripcion", max_length=250)
   precio = models.IntegerField("Precio")
 
+  def __str__(self):
+      return self.nombre
+  
+
 class ImagenProducto(models.Model):
   producto = models.ForeignKey(Producto, on_delete=models.CASCADE, related_name='imagenes')
-  imagen = models.ImageField("Imagen", upload_to=None, height_field=None, width_field=None, max_length=None)
+  descripcion = models.CharField("Descripcion de la imagen", max_length=150)
+  imagen = models.ImageField("Imagen", upload_to='productos', height_field=None, width_field=None, max_length=None)
+  
+  def __str__(self):
+      return "Imagen"
