@@ -1,5 +1,5 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
-// @import 'config';
+@import 'config';
 
 @mixin addBorder {
   border: 1px solid red;
@@ -10,233 +10,233 @@ html {
   box-sizing: border-box;
 }
 
-// body {
-//   padding: 0;
-//   margin: 0;
-//   min-height: 100%;
-// }
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+}
 
-// h1 {
-//   color: $accent-color;
-//   font-weight: 500;
-// }
+h1 {
+  color: $accent-color;
+  font-weight: 500;
+}
 
-// // Header
-// header {
-//   background: darken($background-color, 20);
-//   border-bottom: 2px solid black;
-//   text-align: center;
-//   border-bottom: 2px solid $accent-color;
+// Header
+header {
+  background: darken($background-color, 20);
+  border-bottom: 2px solid black;
+  text-align: center;
+  border-bottom: 2px solid $accent-color;
 
-//   ul {
-//     margin-top: 0;
-//     list-style: none;
-//   }
+  ul {
+    margin-top: 0;
+    list-style: none;
+  }
 
-//   li {
-//     display: inline-block;
-//     margin: 2rem 1rem;
-//   }
+  li {
+    display: inline-block;
+    margin: 2rem 1rem;
+  }
 
-//   a.nav-link {
-//     color: $base-color;
-//     text-transform: uppercase;
-//     text-decoration: none;
-//     font-weight: 500;
-//     font-size: 1.2rem;
-//     text-shadow: $shadow;
+  a.nav-link {
+    color: $base-color;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-shadow: $shadow;
 
-//     &:hover {
-//       color: $accent-color;
-//       @include easeOut
-//     }
+    &:hover {
+      color: $accent-color;
+      @include easeOut
+    }
 
-//     &.current {
-//       color: $accent-color;
-//     }
-//   }
-// }
+    &.current {
+      color: $accent-color;
+    }
+  }
+}
 
-// main {
-//   padding: 2rem 2rem;
-//   margin: 4rem;
-//   background: lighten($background-color, 10);
-//   text-align: center;
-//   min-height: calc(100vh - 120px);
-//   box-shadow: $shadow;
-//   border: 2px solid lighten($background-color, 5);
-//   position: relative;
-// }
+main {
+  padding: 2rem 2rem;
+  margin: 4rem;
+  background: lighten($background-color, 10);
+  text-align: center;
+  min-height: calc(100vh - 120px);
+  box-shadow: $shadow;
+  border: 2px solid lighten($background-color, 5);
+  position: relative;
+}
 
-// // Inicio
-// #inicio {
-//   display: grid;
-//   grid-template-columns: 1fr;
-//   color: $base-color;
+// Inicio
+#inicio {
+  display: grid;
+  grid-template-columns: 1fr;
+  color: $base-color;
 
-//   img {
-//     width: 100%;
-//     box-shadow: $shadow;
-//     border: 1px solid $accent-color;
-//     border-radius: 5px;
-//   }
+  img {
+    width: 100%;
+    box-shadow: $shadow;
+    border: 1px solid $accent-color;
+    border-radius: 5px;
+  }
 
-//   p {
-//     margin-bottom: 2rem;
-//   }
+  p {
+    margin-bottom: 2rem;
+  }
 
-//   .main-btn {
-//     text-decoration: none;
-//     background: $base-color;
-//     color: $accent-color;
-//     text-transform: uppercase;
-//     padding: 10px 20px;
-//     font-weight: 600;
+  .main-btn {
+    text-decoration: none;
+    background: $base-color;
+    color: $accent-color;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    font-weight: 600;
 
-//     &:hover {
-//       background: $accent-color;
-//       color: $base-color;
-//       @include easeOut;
-//     }
-//   }
-// }
+    &:hover {
+      background: $accent-color;
+      color: $base-color;
+      @include easeOut;
+    }
+  }
+}
 
 
-// // Productos
-// #productos {
-//   color: $base-color;
+// Productos
+#productos {
+  color: $base-color;
 
-//   h1 {
-//     margin: 2rem 1rem;
-//   }
+  h1 {
+    margin: 2rem 1rem;
+  }
 
-//   .catalogo {
-//     display: grid;
-//     grid-gap: 30px;
+  .catalogo {
+    display: grid;
+    grid-gap: 30px;
   
-//     grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 
-//     .producto {
-//       padding: 1.5rem 1rem;
-//       background: lighten($background-color, 20);
-//       box-shadow: $shadow;
+    .producto {
+      padding: 1.5rem 1rem;
+      background: lighten($background-color, 20);
+      box-shadow: $shadow;
 
-//       img {
-//         border: 1px solid $background-color;
-//         box-shadow: $shadow;
+      img {
+        border: 1px solid $background-color;
+        box-shadow: $shadow;
 
-//         &:hover {
-//           transform: scale(1.05);
-//           @include easeOut;
-//         }
-//       }
+        &:hover {
+          transform: scale(1.05);
+          @include easeOut;
+        }
+      }
 
-//       h4 {
-//         font-weight: 600;
-//         font-size: 1.4rem;
-//       }
+      h4 {
+        font-weight: 600;
+        font-size: 1.4rem;
+      }
 
-//       span {
-//         font-weight: 400;
-//         font-size: 1.2rem;
+      span {
+        font-weight: 400;
+        font-size: 1.2rem;
 
-//         &.precio {
-//           color: $accent-color;
-//           background: #fff;
-//           padding: 10px;
-//           box-shadow: $shadow;
-//         }
-//       }
-//     }
-//   }
+        &.precio {
+          color: $accent-color;
+          background: #fff;
+          padding: 10px;
+          box-shadow: $shadow;
+        }
+      }
+    }
+  }
   
-// }
+}
 
-// // Contacto
-// #contacto {
-//   display: grid;
-//   grid-gap: 10px;
-//   // grid-template-columns: repeat(2, 1fr);
-//   .contacto-1 {
-//     div {
-//       font-size: 1.2rem;
-//     }
-
-
-//     .text-secondary {
-//       color: $accent-color;
-//       font-size: 2rem;
-//       display: block;
-//       margin: 15px 10px;
-//     }
+// Contacto
+#contacto {
+  display: grid;
+  grid-gap: 10px;
+  // grid-template-columns: repeat(2, 1fr);
+  .contacto-1 {
+    div {
+      font-size: 1.2rem;
+    }
 
 
-//   }
+    .text-secondary {
+      color: $accent-color;
+      font-size: 2rem;
+      display: block;
+      margin: 15px 10px;
+    }
 
-//   #map {
-//     height: 400px;
-//     width: 100%;
-//     border: 1px solid red;
-//     background: grey;
-//   }
 
-//   .contacto-2 {
-//     padding: 6rem 1rem;
+  }
 
-//     input {
-//       width: 100%;
-//       margin: 3px 0;
-//       padding: 2px 5px;
-//       border: 2px solid $accent-color;
-//       box-shadow: $shadow;
+  #map {
+    height: 400px;
+    width: 100%;
+    border: 1px solid red;
+    background: grey;
+  }
 
-//       font-size: 1rem;
+  .contacto-2 {
+    padding: 6rem 1rem;
 
-//       &:last-child {
-//         color: $accent-color;
-//         font-weight: 600;
-//         text-align: right;
-//         width: auto;
-//         cursor: pointer;
-//       }
-//     }
-//   }
+    input {
+      width: 100%;
+      margin: 3px 0;
+      padding: 2px 5px;
+      border: 2px solid $accent-color;
+      box-shadow: $shadow;
 
-// }
+      font-size: 1rem;
 
-// // Footer
-// footer {
-//   background: darken($background-color, 20);
-//   text-align: center;
-//   border-top: 2px solid $accent-color;
-//   padding: 10px;
-//   height: 120px;
+      &:last-child {
+        color: $accent-color;
+        font-weight: 600;
+        text-align: right;
+        width: auto;
+        cursor: pointer;
+      }
+    }
+  }
 
-//   display: grid;
-//   grid-template-columns: repeat(2, 1fr);
+}
 
-//   h4 {
-//     color: $accent-color;
-//     padding: 5px 5px;
-//     font-weight: 200;
-//   }
+// Footer
+footer {
+  background: darken($background-color, 20);
+  text-align: center;
+  border-top: 2px solid $accent-color;
+  padding: 10px;
+  height: 120px;
 
-//   .section-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  h4 {
+    color: $accent-color;
+    padding: 5px 5px;
+    font-weight: 200;
+  }
+
+  .section-2 {
     
-//     div {
-//       margin: 10px;
-//     }
+    div {
+      margin: 10px;
+    }
 
-//     h4 {
-//       display: inline;
-//     }
-//   }
+    h4 {
+      display: inline;
+    }
+  }
 
-//   i{
-//     margin: 0 5px;
-//     padding: 5px 5px;
-//     color: $accent-color;
-//   }
-// }
+  i{
+    margin: 0 5px;
+    padding: 5px 5px;
+    color: $accent-color;
+  }
+}
 
-// @import 'mobile';
+@import 'mobile';

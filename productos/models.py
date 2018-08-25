@@ -12,10 +12,10 @@ class Producto(models.Model):
       return self.nombre
   
 
-class ImagenProducto(models.Model):
-  producto = models.ForeignKey(Producto, on_delete=models.CASCADE, related_name='imagenes')
+class Imagen(models.Model):
+  producto = models.ForeignKey(Producto, on_delete=models.CASCADE, related_name='lista_imagenes')
   descripcion = models.CharField("Descripcion de la imagen", max_length=150)
-  imagen = models.ImageField("Imagen", upload_to='productos', height_field=None, width_field=None, max_length=None)
+  imagen = models.ImageField("Imagen", upload_to='fotos_productos', height_field=None, width_field=None, max_length=None)
   
   def __str__(self):
-      return "Imagen"
+      return self.descripcion
