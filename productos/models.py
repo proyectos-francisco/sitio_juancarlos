@@ -2,12 +2,15 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from django.utils import timezone
 
 class Producto(models.Model):
   nombre = models.CharField("Nombre", max_length=50)
   descripcion = models.CharField("Descripcion", max_length=250)
   precio = models.IntegerField("Precio")
-
+  
+  fecha_publicacion = models.DateTimeField('Fecha de publicacion', default=timezone.now)
+  
   def __str__(self):
       return self.nombre
   
@@ -19,3 +22,5 @@ class Imagen(models.Model):
   
   def __str__(self):
       return self.descripcion
+
+  

@@ -14,10 +14,45 @@
 
 // Tablets & Small Laptops
 @include mediaMd{
+  body {
+    font-size: 1.2rem;
+  }
+
   header {
+    .main-nav {
+      display: grid;
+      grid-template-columns: 1fr;
+
+      transition: max-height 0.5s ease-out;
+      height: auto;
+      max-height: 500px;
+      &.hidden {
+        max-height: 0;
+        overflow: hidden;
+      }
+    }
+
     ul {
       display: grid;
       grid-template-columns: 1fr;
+      padding: 10px 20px;
+    }
+    
+    .nav-btn {    
+      display: inline-block;
+      padding: 15px 10px 7px 10px;
+      margin: 0.5rem 1rem;
+
+      .nav-line {
+        border-top: 3px solid $accent-color;
+        margin: 0 0 8px 0;
+        width: 80px;
+        height: 5px;
+      }
+
+      &.close {
+        background: lighten($background-color, 2);
+      }
     }
   }
 
@@ -30,5 +65,15 @@
 
 // Smarthones
 @include mediaSm{
-  
+  main {
+    padding: 2rem 0.5rem;
+    margin: 1rem;
+    
+  }
+
+  footer {
+    height: 250px;
+    grid-template-columns: 1fr;
+    padding-bottom: 20px;
+  }
 }

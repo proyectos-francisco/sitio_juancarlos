@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['castillosoft.pythonanywhere.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -122,7 +122,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+#TODO: Cambiar en produccion
+STATIC_ROOT = '/static/'
 
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -131,7 +132,9 @@ STATICFILES_FINDERS = [
     # 'django.contrib.staticfiles.finders.DefaultStorageFinder',
 ]
 
-SASS_PROCESSOR_ENABLED = False
+#TODO: Cambiar a True en produccion
+#TODO: image serving on production
+SASS_PROCESSOR_ENABLED = True
 
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+MEDIA_ROOT = '/media/'
 MEDIA_URL = '/media/'
