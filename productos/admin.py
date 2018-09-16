@@ -15,8 +15,8 @@ class ImagenInline(admin.TabularInline):
 
   admin_thumbnail = AdminThumbnail(image_field='imagen')
   admin_thumbnail.short_description = 'Imagen previa'
-  fields = ['descripcion','imagen','admin_thumbnail']
-  readonly_fields = ['admin_thumbnail']
+  fields = ['descripcion','imagen','admin_thumbnail', 'original_file_name']
+  readonly_fields = ['admin_thumbnail', 'original_file_name']
 
 
 class ProductoAdmin(admin.ModelAdmin):

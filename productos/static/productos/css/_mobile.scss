@@ -1,79 +1,94 @@
-// Widescreens
-// @include mediaXl{
-//   .projects {
-//       grid-template-columns: repeat(4, 1fr);
-//   }
-// }
-
-// Desktops & Laptops
-// @include mediaLg{
-//   .projects {
-//       grid-template-columns: repeat(3, 1fr);
-//   }
-// }
-
 // Tablets & Small Laptops
-@include mediaMd{
-  body {
-    font-size: 1.2rem;
-  }
-
+@media screen and (min-width: 501px){
   header {
-    .main-nav {
-      display: grid;
-      grid-template-columns: 1fr;
-
-      transition: max-height 0.5s ease-out;
-      height: auto;
-      max-height: 500px;
-      &.hidden {
-        max-height: 0;
-        overflow: hidden;
-      }
-    }
+    width: 100%;
 
     ul {
-      display: grid;
-      grid-template-columns: 1fr;
-      padding: 10px 20px;
+      grid-template-columns: repeat(3, 1fr);
     }
-    
-    .nav-btn {    
-      display: inline-block;
-      padding: 15px 10px 7px 10px;
-      margin: 0.5rem 1rem;
 
-      .nav-line {
-        border-top: 3px solid $accent-color;
-        margin: 0 0 8px 0;
-        width: 80px;
-        height: 5px;
+    a.nav-link {
+      &:active {
+        color: $accent-color;
       }
+    }
 
-      &.close {
-        background: lighten($background-color, 2);
-      }
+    .nav-btn {
+      display: none;
     }
   }
 
-  main#productos {
-    .catalogo {
-      grid-template-columns: 1fr;
-    }
+  .catalogo {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-// Smarthones
-@include mediaSm{
+// Desktops & Laptops
+@media screen and (min-width: 769px) {
+  header {
+    a.nav-link {
+      &:hover {
+        color: $accent-color;
+        @include easeOut
+      }
+    }
+  }
+
   main {
-    padding: 2rem 0.5rem;
-    margin: 1rem;
-    
+    margin: 2rem;
+  }
+
+  #inicio {
+    .inicio-info{
+      grid-template-columns: repeat(2, 1fr);
+
+      .main-btn {
+        &:hover {
+          background: $accent-color;
+          color: $base-color;
+          @include easeOut;
+        }
+      }
+    }
+  }
+
+  .catalogo {
+    grid-template-columns: repeat(3, 1fr);
+    .producto {
+      &:hover {
+        border: $border-accent;
+        @include easeOut(0.1s);
+      }
+    }
+  }
+
+  #contacto {
+    .contacto-2 {
+      input {
+        font-size: 1rem;
+  
+        &:last-child {
+          &:hover {
+            background-color: $base-color;
+            color: $accent-color;
+            @include easeOut;
+
+            cursor: pointer;
+          }
+        }
+      }
+    }
   }
 
   footer {
-    height: 250px;
-    grid-template-columns: 1fr;
-    padding-bottom: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    height: 120px;
+  }
+}
+
+// Widescreens
+@media screen and (min-width: 1100px) {
+  .catalogo {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
