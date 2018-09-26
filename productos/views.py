@@ -6,14 +6,14 @@ from django.http import HttpResponse
 
 from .models import Producto
 
-#TODO: traer html a los templates
-#TODO: agregar scss
 #TODO: remodelar admin
 #TODO: deploy
 
 def index(request):
+  productos_list = Producto.objects.order_by('-fecha_publicacion')[:4]
   return render(request, 'productos/index.html', {
     'current': 'index',
+    'productos': productos_list,
   })
 
 def empresa(request):
@@ -22,12 +22,16 @@ def empresa(request):
   })
 
 def productos(request):
-  productos_list = Producto.objects.all()
+  productos_list = Producto.objects.order_by('-fecha_publicacion')
   return render(request, 'productos/productos.html', {
     'current': 'productos',
     'productos': productos_list,
   })
+
 def contacto(request):
   return render(request, 'productos/contacto.html', {
     'current': 'contacto',
   })
+
+def handler404(request):
+  return render(request, 'productos/404.html')

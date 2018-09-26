@@ -1,34 +1,94 @@
-// Widescreens
-// @include mediaXl{
-//   .projects {
-//       grid-template-columns: repeat(4, 1fr);
-//   }
-// }
-
-// Desktops & Laptops
-// @include mediaLg{
-//   .projects {
-//       grid-template-columns: repeat(3, 1fr);
-//   }
-// }
-
 // Tablets & Small Laptops
-@include mediaMd{
+@media screen and (min-width: 501px){
   header {
+    width: 100%;
+
     ul {
-      display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    a.nav-link {
+      &:active {
+        color: $accent-color;
+      }
+    }
+
+    .nav-btn {
+      display: none;
     }
   }
 
-  main#productos {
-    .catalogo {
-      grid-template-columns: 1fr;
-    }
+  .catalogo {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-// Smarthones
-@include mediaSm{
+// Desktops & Laptops
+@media screen and (min-width: 769px) {
+  header {
+    a.nav-link {
+      &:hover {
+        color: $accent-color;
+        @include easeOut
+      }
+    }
+  }
+
+  main {
+    margin: 2rem;
+  }
+
+  #inicio {
+    .inicio-info{
+      grid-template-columns: repeat(2, 1fr);
+
+      .main-btn {
+        &:hover {
+          background: $accent-color;
+          color: $base-color;
+          @include easeOut;
+        }
+      }
+    }
+  }
+
+  .catalogo {
+    grid-template-columns: repeat(3, 1fr);
+    .producto {
+      &:hover {
+        border: $border-accent;
+        @include easeOut(0.1s);
+      }
+    }
+  }
+
+  #contacto {
+    .contacto-2 {
+      input {
+        font-size: 1rem;
   
+        &:last-child {
+          &:hover {
+            background-color: $base-color;
+            color: $accent-color;
+            @include easeOut;
+
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    grid-template-columns: repeat(2, 1fr);
+    height: 120px;
+  }
+}
+
+// Widescreens
+@media screen and (min-width: 1100px) {
+  .catalogo {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

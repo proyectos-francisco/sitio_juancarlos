@@ -21,3 +21,5 @@ urlpatterns = [
     url(r'^', include('productos.urls')),
     url(r'^admin/', admin.site.urls),
 ]
+
+handler404 = 'productos.views.handler404'

@@ -6,14 +6,14 @@
 {% endblock titulo %}
 
 {% block contenido %}
-  <main id="productos">
-    <h1>Productos</h1>
+  <main class="productos">
+    <h2>Productos</h2>
     <div class="catalogo">
       {% for producto in productos %}
         <div class="producto">
-          <img src="{{ producto.lista_imagenes.all.0.imagen.url }}" alt="">
+          <img src="{{ producto.lista_imagenes.all.0.thumbnail.url }}" alt="">
           <h4> {{ producto.nombre }} </h4>
-          <p><span>Descripción:</span> {{ producto.descripcion }}</p>
+          <p>{{ producto.descripcion }}</p>
           <span class="precio">$ {{ producto.precio|intcomma }}</span>  
         </div>
       {% endfor %}

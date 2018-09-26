@@ -4,9 +4,9 @@
       <li>
         <a href="{% url 'productos:index' %}" class="nav-link {% if current == 'index' %}current{% endif %}">Inicio</a>
       </li>
-      <li>
+      <!-- <li>
         <a href="{% url 'productos:empresa' %}" class="nav-link {% if current == 'empresa' %}current{% endif %}">Quienes somos</a>
-      </li>
+      </li> -->
       <li>
         <a href="{% url 'productos:productos' %}" class="nav-link {% if current == 'productos' %}current{% endif %}">Productos</a>
       </li>
@@ -15,5 +15,10 @@
       </li>
     </ul>
   </nav>
+  <div class="nav-btn">
+    <div class="nav-line"></div>
+    <div class="nav-line"></div>
+    <div class="nav-line"></div>
+  </div>
 </header>
 

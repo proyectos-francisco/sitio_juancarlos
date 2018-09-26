@@ -5,6 +5,5 @@ __pycache__
 .DS_Store
 db.sqlite3
 instrucciones.md
-sitio_juancarlos/settings.py
-/.vscode
 activate_sjc.sh
+.vscode/
