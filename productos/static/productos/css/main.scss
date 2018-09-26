@@ -241,10 +241,6 @@ main {
 
       font-size: 1.2rem;
 
-      &:nth-child(5){
-        height: 7rem;
-      }
-
       &:last-child {
         background-color: $accent-color;
         color: $base-color;
@@ -252,6 +248,16 @@ main {
         text-align: center;
         height: 3rem;
       }
+    }
+
+    textarea {
+      border: $border-accent;
+      box-shadow: $shadow;
+      resize: none;
+
+      font-size: 1.2rem;
+
+      padding: 2px 5px 7rem 5px;
     }
   }
 }

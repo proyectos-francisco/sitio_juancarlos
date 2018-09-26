@@ -22,12 +22,16 @@ def empresa(request):
   })
 
 def productos(request):
-  productos_list = Producto.objects.all()
+  productos_list = Producto.objects.order_by('-fecha_publicacion')
   return render(request, 'productos/productos.html', {
     'current': 'productos',
     'productos': productos_list,
   })
+
 def contacto(request):
   return render(request, 'productos/contacto.html', {
     'current': 'contacto',
   })
+
+def handler404(request):
+  return render(request, 'productos/404.html')

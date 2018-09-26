@@ -31,11 +31,12 @@
 
     <div class="contacto-2">
       <form action="#" method="POST">
+        {% csrf_token %}
         <input type="text" name="nombre" placeholder="Nombre">
         <input type="text" name="email" placeholder="E-mail">
-        <input type="text" name="" placeholder="Teléfono">
-        <input type="text" name="" placeholder="Asunto">
-        <input type="text" name="" placeholder="Mensaje">
+        <input type="text" name="telefono" placeholder="Teléfono">
+        <input type="text" name="asunto" placeholder="Asunto">
+        <textarea name="mensaje" placeholder="Mensaje"></textarea>
         <input type="submit" value="Enviar">
       </form>
     </div>
